@@ -1,0 +1,23 @@
+.slot-tabla {
+    /* Opreste intinderea chenarului STRICT pe verticala (nu se mai face inalt) */
+    align-self: center; 
+    
+    /* Ii dam doar o inaltime minima pentru cand casuta e goala (ca sa ai unde sa faci drop) */
+    /* Ajusteaza acest numar ca sa fie exact cat inaltimea piesei tale */
+    min-height: 55px; 
+    
+    /* FARA width, fara height fix si fara justify-self, ca sa nu mai strivim piesa! */
+
+    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.slot-tabla.activ {
+    border: 2px dashed #4caf50;
+    background-color: rgba(76, 175, 80, 0.1);
+}

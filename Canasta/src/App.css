@@ -1,0 +1,102 @@
+.masa-joc-container {
+  text-align: center;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.masa-joc {
+    display: grid;
+    /* Marim de la 35px la 45px ca sa aiba loc piesa de 40px + margin */
+    grid-template-columns: repeat(20, 45px); 
+    grid-auto-rows: 90px;
+    justify-content: center; 
+    gap: 8px; 
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    min-height: 200px;
+}
+.piesa-placeholder
+{
+    width: 40px;
+    height: 60px;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.zona-decartare {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+
+
+
+.linie-scor-formatie {
+    /* Plaseaza div-ul fix in varful celulelor alocate pe randul respectiv */
+    align-self: start; 
+    
+    /* Mutam linia nitel mai sus de carti */
+    transform: translateY(-5px); 
+    
+    border-top: 3px solid #ffd700; /* Linie galbena/aurie */
+    display: flex;
+    justify-content: center;
+    pointer-events: none; /* Ca sa nu te incurce cand vrei sa tragi cartile de sub ea */
+    z-index: 10;
+}
+
+.text-scor {
+    background-color: #ffd700;
+    color: #000;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    transform: translateY(-50%); /* O centreaza exact pe linia trasata */
+}
+
+.zona-etalare {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    background-color: #143316; /* Un verde inchis, ca postavul unei mese de joc */
+    border: 2px solid #2e5c32;
+    border-radius: 10px;
+    min-height: 80px;
+    align-items: center;
+}
+
+.grup-etalat {
+    display: flex;
+    gap: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.buton-etaleaza {
+    margin-left: 10px;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.buton-etaleaza.activ {
+    background-color: #ffd700;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.buton-etaleaza.dezactivat {
+    background-color: #444;
+    color: #888;
+    cursor: not-allowed;
+}
